@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aléxia Vitória | Desenvolvedora de Sistemas</title>
+  <meta name="description" content="Portfólio de Aléxia Vitória, desenvolvedora de sistemas. Projetos, tecnologias e contato.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio">Meu Portfólio</a>
+    <nav aria-label="Principal">
+      <a href="#projetos">Projetos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <img class="foto" src="foto-perfil.jpg" alt="Foto de Aléxia Vitória" width="400" height="500">
+      <div class="hero-texto">
+     <p class="lead">Prazer, eu sou a </p>
+      <h1>Aléxia Vitória,<br>construo sistemas que funcionam.</h1>
+      <p class="lead">Desenvolvedora de sistemas, formando em 2026. Escrevo código limpo para web e procuro oportunidades para demonstrar minhas habilidades na área.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projetos">Ver projetos</a>
+        <a class="btn" href="Resumo Profissional-Aléxia.pdf" download>Baixar currículo</a>
+      </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="section">
+      <h2>Projetos</h2>
+
+      <div hidden>
+        <p class="hint">Filtre por tecnologia:</p>
+        <div class="filters" id="filtros" role="group" aria-label="Filtrar projetos por tecnologia"></div>
+      </div>
+
+      <ul class="projects" id="lista-projetos">
+        <li class="project" data-tags="HTML CSS JavaScript">
+          <div>
+            <h3>Sistema Barbearia (Aplicação Desktop Java Swing e WEB)</h3>
+            <p>Sistematização para micro empreendedores.</p>
+            <p class="tags">HTML, MaterializeCSS, Java</p>
+          </div>
+          <div class="links">
+            <a href="https://github.com/alexiavih/SistemaBarbearia">Código</a>
+          </div>
+        </li>
+
+        <li class="project" data-tags="Java Python">
+          <div>
+            <h3>Site Sonnetto Music - Escola de Música</h3>
+            <p>O diretor e maestro de uma escola musical em São Paulo desejava ampliar o seu negócio e sistematizar a sua instituição. Com isso
+              surgiu o site da Sonnetto.
+            </p>
+            <p class="tags">Next.js (App Router), React, Tailwind CSS, TypeScript, Lucide React (Ícones)</p>
+          </div>
+          <div class="links">
+            <a href="https://github.com/alexiavih/sonnetto-music-portfolio">Código</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="sobre" class="section">
+      <h2>Sobre</h2>
+      <p class="prose">Sou desenvolvedora de software com formação técnica em Análise e Desenvolvimento de Sistemas pelas instituições ETEC e FATEC. Tenho experiência prática na criação de soluções completas, incluindo o desenvolvimento de sistemas de e-commerce e aplicativos móveis.</p>
+      <p class="prose">Atualmente, estou liderando o desenvolvimento de uma plataforma web completa para uma escola de música em São Paulo. Busco constantemente criar sistemas eficientes, intuitivos e fáceis de usar, alinhando boa arquitetura de código a uma ótima experiência do usuário.</p>
+      <p class="prose">Tecnologias com que trabalho: HTML, CSS, JavaScript, Java, Python e GitHub.</p>
+    </section>
+
+    <section id="contato" class="section">
+      <h2>Contato</h2>
+      <p class="prose">Aberta a propostas e conversas sobre vagas.</p>
+      <div class="actions">
+        <button class="btn primary" id="copiar-email" type="button" data-email="alexiavivi2006@gmail.com">Copiar e-mail</button>
+        <a class="btn" href="https://github.com/alexiavih">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/al%C3%A9xia-vit%C3%B3ria-665941236/">LinkedIn</a>
+      </div>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="ano"></span> Aléxia Vitória</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
