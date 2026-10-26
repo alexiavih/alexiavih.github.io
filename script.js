@@ -34,16 +34,18 @@ filtros.addEventListener("click", (evento) => {
   });
 });
 
-// Copiar e-mail
-const botaoEmail = document.getElementById("copiar-email");
+// Copiar e-mail e telefone
 const status = document.getElementById("status");
 
-botaoEmail.addEventListener("click", async () => {
-  const email = botaoEmail.dataset.email;
-  try {
-    await navigator.clipboard.writeText(email);
-    status.textContent = "E-mail copiado: " + email;
-  } catch (erro) {
-    status.textContent = "Não foi possível copiar. Meu e-mail é " + email;
-  }
+document.querySelectorAll("[data-copiar]").forEach((botao) => {
+  botao.addEventListener("click", async () => {
+    const texto = botao.dataset.copiar;
+    const rotulo = botao.dataset.rotulo;
+    try {
+      await navigator.clipboard.writeText(texto);
+      status.textContent = rotulo + " copiado: " + texto;
+    } catch (erro) {
+      status.textContent = "Não foi possível copiar. " + rotulo + ": " + texto;
+    }
+  });
 });
